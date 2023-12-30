@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Person
+@using (Html.BeginForm("ValidateAge","Home", FormMethod.Post))
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(Model => Model.Name)</td>
+            <td>@Html.TextBoxFor(Model => Model.Name)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(Model => Model.Age)</td>
+            <td>@Html.TextBoxFor(Model => Model.Age)</td>
+        </tr>
+        <tr>
+            <td colspan = "2"><input type="submit" value = "Submit"/></td>  
+        </tr>
+    </table>
+}
+
+@if (ViewBag.Message != null)
+{
+    <b>@ViewBag.Message</b>
+}

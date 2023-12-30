@@ -1,0 +1,83 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <a href = @Url.Action("Index2","Home")>Navigate to Activity 2</a>
+</div>
+
+<div>
+    <a href=@Url.Action("ValidateAge", "Home")>Navigate to Activity 3</a>
+</div>
+
+<div>
+    <a href=@Url.Action("Activity4", "Home")>Navigate to Activity 4 - Partial View</a>
+</div>
+<div>
+<a href=@Url.Action("Activity5", "Home")>Navigate to Activity 5 - View Components</a>
+</div>
+
+<div>
+    <a href=@Url.Action("Activity6", "Home")>Navigate to Activity 6 - Tag Helpers</a>
+</div>
+<div>
+<h2> Views Demo 1</h2>
+ @{
+        int i = 5;
+    }
+    Value: @i
+</div>
+
+<div>
+<h2> Views Demo 2</h2>
+        <ul>
+        @{ for (int j = 0; j<5; j++)
+            {
+                <li>@(j+1)</li>
+            }
+        }
+    </ul>
+</div>
+
+<div>
+    <h2> Views Demo 3</h2>
+    <ul>
+    @{
+        int k = 0;
+        while (k < 5)
+        {
+                <li>@(k+1)</li>
+                k++;
+            }
+        }
+    </ul>
+</div>
+
+<div>
+    <h2> Views Demo 4</h2>
+    @{
+        List<int> ints = new List<int>
+        {
+            1,2,3,4,5
+        };
+        foreach(int l in ints)
+        {<ul>
+                <li> @l</li>
+            </ul>
+        }
+    }
+</div>
+
+<div>
+    <h2>Views Demo 5</h2>
+    @{
+        int x = 5;
+        if (x < 5)
+        {
+            <text>x is less than 5. The value of x is: @x</text>
+        }
+        else
+        {
+            <text> x is greater than 5. The value of x is @x.</text>
+        }
+      }
+        </div>

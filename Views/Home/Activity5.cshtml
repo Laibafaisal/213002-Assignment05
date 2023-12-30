@@ -1,0 +1,13 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>ACTVITY 5 - VIEW COMPONENTS</h1>
+<p>This is a sample web page.<br />
+    <div>
+        @*@await Component.InvokeAsync("ViewComponents/Simple",new {additionalData = "five"})*@
+        @await Component.InvokeAsync("Simple", new { additionalData = "Five" })
+    </div>
+
+</p>
